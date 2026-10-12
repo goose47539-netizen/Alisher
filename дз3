@@ -1,0 +1,9 @@
+def count_items(nums):
+    if nums == []:
+        return 0
+
+    return 1 + count_items(nums[1:])
+
+numbers = [10, 20, 30, 40, 50]
+
+print("Количество элементов:", count_items(numbers))
