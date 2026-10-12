@@ -1,0 +1,15 @@
+let numbers = [5, 2, 8, 1, 7, 3, 6, 4];
+
+for (let i = 0; i < numbers.length; i++) {
+    let maxIndex = i;
+
+    for (let j = i + 1; j < numbers.length; j++) {
+        if (numbers[j] > numbers[maxIndex]) {
+            maxIndex = j;
+        }
+    }
+
+    [numbers[i], numbers[maxIndex]] = [numbers[maxIndex], numbers[i]];
+}
+
+console.log("Отсортированный список:", numbers);
